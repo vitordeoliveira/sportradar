@@ -21,3 +21,12 @@
 | NF4 | Provide a commit history to reflect the progress, with the solution in a source control repository.       |      |
 | NF5 | Include a `README.md` file with project documentation, assumptions, and additional notes.                 |      |
 | NF6 | Ensure the solution focuses on quality and adheres to high development standards.                         |      |
+
+## TODO-LIST
+
+| Desired Order | Task       | Done |
+|-----|-------------------|------|
+| TSK1  | ADR - language |  DONE  |
+| TSK2  | ADR - git strategy |  DONE  |
+| TSK3  | Node TS init |    |
+| TSK4  | Node TS test tools init |    |
