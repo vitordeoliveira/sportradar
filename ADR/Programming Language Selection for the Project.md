@@ -1,0 +1,68 @@
+# Programming Language Selection for the Project
+## Context and Problem Statement
+The task requires implementing a simple library to manage a scoreboard system. The recruiter emphasized frontend-related skills, but the task doesn't explicitly specify a preferred programming language. The three options under consideration are Java, Rust, and JavaScript/TypeScript. Each language has its strengths and weaknesses, and the decision needs to balance personal efficiency, the company's expectations, and the time constraints.
+
+## Considered Options
+1. Java
+2. Rust
+3. JavaScript/TypeScript
+
+## Decision Drivers
+Task Requirements: Simplicity and adherence to task guidelines.
+Setup Time: Quick setup and minimal overhead.
+Development Environment: Compatibility with Arch Linux and Neovim.
+Role Alignment: Relevance to the company's expectations and the recruiter's emphasis on frontend skills.
+Time Constraints: Limited time due to a hard deadline (Monday) and personal weekend plans.
+Pros and Cons of Each Option
+### Java
+Pros:
+
+Likely aligns with task expectations, as Java appears to be a reasonable assumption for the company's tech stack.
+Well-suited for OO design and adherence to SOLID principles.
+Cons:
+
+Development environment issues: Arch Linux and Neovim are not ideal for Java development.
+Verbose syntax and significant boilerplate for a simple task.
+Setup time: Requires fixing various environment configurations, which could delay the start.
+Potential overengineering for a simple task.
+Time-consuming due to verbosity and setup requirements.
+### Rust
+Pros:
+
+Already set up and ready for development in the current environment.
+Personal preference and expertise: Efficient and enjoyable to work with.
+Built-in testing framework simplifies test-driven development.
+Excellent fit for implementing a simple library.
+Cons:
+
+The role isn't Rust-focused, so using Rust might not align with the company's expectations.
+Limited relevance to the recruiter's emphasis on frontend skills.
+Could be perceived as overcomplicating the task for a non-Rust role.
+### JavaScript/TypeScript
+Pros:
+
+Fast setup and minimal configuration required.
+Highly relevant to frontend-related skills, aligning with the recruiter's emphasis.
+Ideal for a simple task due to its lightweight nature.
+Broad familiarity among developers, which could demonstrate practical skills for the role.
+Cons:
+
+Performance: Slower compared to Rust for certain tasks.
+Lack of built-in testing compared to Rust (though frameworks like Jest mitigate this).
+Less strict typing and structure (TypeScript can address this but adds some complexity).
+Error handling and debugging can be less intuitive compared to strongly typed languages.
+## Decision Outcome
+Chosen Option: JavaScript/TypeScript
+
+Justification:
+JavaScript/TypeScript aligns with the recruiter's emphasis on frontend skills and the likely expectations for the role.
+It offers a fast and straightforward setup, allowing for quick project initiation.
+The simplicity of the language is a good match for the task's requirements.
+It demonstrates practical and relevant skills without overengineering or misalignment with the role.
+Rejected Options:
+Java: Despite being a strong candidate, the environment setup and verbosity make it impractical given the time constraints and simplicity of the task.
+Rust: While personally preferred, it doesn’t align with the company's expectations for this role and could detract from the overall assessment of relevant skills.
+Consequences
+Using JavaScript/TypeScript ensures alignment with role expectations and task requirements.
+The decision maximizes available time for implementation and testing while minimizing setup overhead.
+It showcases relevant frontend-oriented skills, potentially improving alignment with the company's needs.
