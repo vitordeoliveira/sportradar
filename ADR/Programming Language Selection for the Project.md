@@ -19,43 +19,12 @@ The task requires implementing a simple library to manage a scoreboard system. T
 
 
 ## Pros and Cons of Each Option
-### Java
-#### Pros:
+| Language               | Pros                                                                                         | Cons                                                                                                   |
+|------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Java**              | - Likely aligns with task expectations, as Java appears to be a reasonable assumption for the company's tech stack. <br> - Well-suited for OO design and adherence to SOLID principles. | - Development environment issues: Arch Linux and Neovim are not ideal for Java development. <br> - Verbose syntax and significant boilerplate for a simple task. <br> - Requires fixing various environment configurations, delaying the start. <br> - Potential overengineering for a simple task. <br> - Time-consuming due to verbosity and setup requirements. |
+| **Rust**              | - Already set up and ready for development in the current environment. <br> - Personal preference and expertise: Efficient and enjoyable to work with. <br> - Built-in testing framework simplifies test-driven development. <br> - Excellent fit for implementing a simple library. | - The role isn't Rust-focused, so using Rust might not align with the company's expectations. <br> - Limited relevance to the recruiter's emphasis on frontend skills. <br> - Could be perceived as overcomplicating the task for a non-Rust role. |
+| **JavaScript/TypeScript** | - Fast setup and minimal configuration required. <br> - Highly relevant to frontend-related skills, aligning with the recruiter's emphasis. <br> - Ideal for a simple task due to its lightweight nature. <br> - Broad familiarity among developers, demonstrating practical skills for the role. | - Performance: Slower compared to Rust for certain tasks. <br> - Lack of built-in testing compared to Rust (though frameworks like Jest mitigate this). <br> - Less strict typing and structure (TypeScript can address this but adds some complexity). <br> - Error handling and debugging can be less intuitive compared to strongly typed languages. |
 
-Likely aligns with task expectations, as Java appears to be a reasonable assumption for the company's tech stack.
-Well-suited for OO design and adherence to SOLID principles.
-#### Cons:
-
-Development environment issues: Arch Linux and Neovim are not ideal for Java development.
-Verbose syntax and significant boilerplate for a simple task.
-Setup time: Requires fixing various environment configurations, which could delay the start.
-Potential overengineering for a simple task.
-Time-consuming due to verbosity and setup requirements.
-### Rust
-#### Pros:
-
-Already set up and ready for development in the current environment.
-Personal preference and expertise: Efficient and enjoyable to work with.
-Built-in testing framework simplifies test-driven development.
-Excellent fit for implementing a simple library.
-#### Cons:
-
-The role isn't Rust-focused, so using Rust might not align with the company's expectations.
-Limited relevance to the recruiter's emphasis on frontend skills.
-Could be perceived as overcomplicating the task for a non-Rust role.
-### JavaScript/TypeScript
-#### Pros:
-
-Fast setup and minimal configuration required.
-Highly relevant to frontend-related skills, aligning with the recruiter's emphasis.
-Ideal for a simple task due to its lightweight nature.
-Broad familiarity among developers, which could demonstrate practical skills for the role.
-#### Cons:
-
-Performance: Slower compared to Rust for certain tasks.
-Lack of built-in testing compared to Rust (though frameworks like Jest mitigate this).
-Less strict typing and structure (TypeScript can address this but adds some complexity).
-Error handling and debugging can be less intuitive compared to strongly typed languages.
 ## Decision Outcome
 Chosen Option: **JavaScript/TypeScript**
 
