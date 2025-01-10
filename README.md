@@ -2,7 +2,9 @@
 
 ## architectural decision records
 [ADR - Programming Language Selection for the Project](/ADR/Programming%20Language%20Selection%20for%20the%20Project.md)
-[[ADR - Project Branches Structure](/Project%20Branches%20Structure.md)
+
+
+[ADR - Project Branches Structure](/Project%20Branches%20Structure.md)
 
 ### Functional Requirements
 
