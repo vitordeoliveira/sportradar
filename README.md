@@ -24,9 +24,10 @@
 
 ## TODO-LIST
 
-| Desired Order | Task       | Done |
-|-----|-------------------|------|
-| TSK1  | ADR - language |  DONE  |
-| TSK2  | ADR - git strategy |  DONE  |
-| TSK3  | Node TS init |    |
-| TSK4  | Node TS test tools init |    |
+| Desired Order | Task                    | Done  |
+|---------------|-------------------------|-------|
+| TSK1          | ADR - language           | DONE  |
+| TSK2          | ADR - git strategy       | DONE  |
+| TSK3          | Node TS init             |       |
+| TSK4          | Node TS test tools init  |       |
+| TSK5          | ADR - test strategy      |       |
