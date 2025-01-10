@@ -8,18 +8,23 @@ The task requires implementing a simple library to manage a scoreboard system. T
 3. JavaScript/TypeScript
 
 ## Decision Drivers
-Task Requirements: Simplicity and adherence to task guidelines.
-Setup Time: Quick setup and minimal overhead.
-Development Environment: Compatibility with Arch Linux and Neovim.
-Role Alignment: Relevance to the company's expectations and the recruiter's emphasis on frontend skills.
-Time Constraints: Limited time due to a hard deadline (Monday) and personal weekend plans.
-Pros and Cons of Each Option
+| Category                | Details                                                                                   |
+|-------------------------|-------------------------------------------------------------------------------------------|
+| Task Requirements       | Simplicity and adherence to task guidelines.                                              |
+| Setup Time              | Quick setup and minimal overhead.                                                         |
+| Development Environment | Compatibility with Arch Linux and Neovim.                                                 |
+| Role Alignment          | Relevance to the company's expectations and the recruiter's emphasis on frontend skills.   |
+| Time Constraints        | Limited time due to a hard deadline (Monday) and personal weekend plans.                  |
+| Pros and Cons           | Evaluation of the advantages and disadvantages of each option.                            |
+
+
+## Pros and Cons of Each Option
 ### Java
-Pros:
+#### Pros:
 
 Likely aligns with task expectations, as Java appears to be a reasonable assumption for the company's tech stack.
 Well-suited for OO design and adherence to SOLID principles.
-Cons:
+#### Cons:
 
 Development environment issues: Arch Linux and Neovim are not ideal for Java development.
 Verbose syntax and significant boilerplate for a simple task.
@@ -27,32 +32,32 @@ Setup time: Requires fixing various environment configurations, which could dela
 Potential overengineering for a simple task.
 Time-consuming due to verbosity and setup requirements.
 ### Rust
-Pros:
+#### Pros:
 
 Already set up and ready for development in the current environment.
 Personal preference and expertise: Efficient and enjoyable to work with.
 Built-in testing framework simplifies test-driven development.
 Excellent fit for implementing a simple library.
-Cons:
+#### Cons:
 
 The role isn't Rust-focused, so using Rust might not align with the company's expectations.
 Limited relevance to the recruiter's emphasis on frontend skills.
 Could be perceived as overcomplicating the task for a non-Rust role.
 ### JavaScript/TypeScript
-Pros:
+#### Pros:
 
 Fast setup and minimal configuration required.
 Highly relevant to frontend-related skills, aligning with the recruiter's emphasis.
 Ideal for a simple task due to its lightweight nature.
 Broad familiarity among developers, which could demonstrate practical skills for the role.
-Cons:
+#### Cons:
 
 Performance: Slower compared to Rust for certain tasks.
 Lack of built-in testing compared to Rust (though frameworks like Jest mitigate this).
 Less strict typing and structure (TypeScript can address this but adds some complexity).
 Error handling and debugging can be less intuitive compared to strongly typed languages.
 ## Decision Outcome
-Chosen Option: JavaScript/TypeScript
+Chosen Option: **JavaScript/TypeScript**
 
 Justification:
 JavaScript/TypeScript aligns with the recruiter's emphasis on frontend skills and the likely expectations for the role.
