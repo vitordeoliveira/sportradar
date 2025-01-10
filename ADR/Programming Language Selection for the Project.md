@@ -28,15 +28,19 @@ The task requires implementing a simple library to manage a scoreboard system. T
 ## Decision Outcome
 Chosen Option: **JavaScript/TypeScript**
 
-Justification:
+### Justification:
 JavaScript/TypeScript aligns with the recruiter's emphasis on frontend skills and the likely expectations for the role.
 It offers a fast and straightforward setup, allowing for quick project initiation.
 The simplicity of the language is a good match for the task's requirements.
 It demonstrates practical and relevant skills without overengineering or misalignment with the role.
-Rejected Options:
+
+#### Rejected Options:
 Java: Despite being a strong candidate, the environment setup and verbosity make it impractical given the time constraints and simplicity of the task.
+
+
 Rust: While personally preferred, it doesn’t align with the company's expectations for this role and could detract from the overall assessment of relevant skills.
-Consequences
+
+## Consequences
 Using JavaScript/TypeScript ensures alignment with role expectations and task requirements.
 The decision maximizes available time for implementation and testing while minimizing setup overhead.
 It showcases relevant frontend-oriented skills, potentially improving alignment with the company's needs.
