@@ -1,0 +1,27 @@
+{
+  "name": "sportradar_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitordeoliveira/sportradar_test.git"
+  },
+  "author": "Vitor de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitordeoliveira/sportradar_test/issues"
+  },
+  "homepage": "https://github.com/vitordeoliveira/sportradar_test#readme"
+}
