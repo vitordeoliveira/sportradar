@@ -53,6 +53,19 @@ describe("Scoreboard", () => {
       expect(currentMatch).toEqual({ ...match, awayScore: 1 });
     });
 
+    it("should return error in match id does not exist", () => {
+      const db: InMemoryDatabase = {};
+
+      const scoreboard = new Scoreboard(db);
+
+      expect(() =>
+        scoreboard.updateMatch("non_existent_match", {
+          home: 0,
+          away: 1,
+        }),
+      ).toThrow("match dont exist");
+    });
+
   });
 
   it("Should finish the match remove match from scoreboard", () => {});
