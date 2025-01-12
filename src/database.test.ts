@@ -8,6 +8,7 @@ describe("Match and InMemoryDatabase Types", () => {
       awayTeam: "Team B",
       homeScore: 2,
       awayScore: 1,
+      finished: false,
     };
 
     expect(match.id).toBe("1");
@@ -26,6 +27,7 @@ describe("Match and InMemoryDatabase Types", () => {
       awayTeam: "Team B",
       homeScore: 0,
       awayScore: 0,
+      finished: false,
     };
 
     const match2: Match = {
@@ -34,6 +36,7 @@ describe("Match and InMemoryDatabase Types", () => {
       awayTeam: "Team D",
       homeScore: 3,
       awayScore: 2,
+      finished: false,
     };
 
     db[match1.id] = match1;
@@ -53,6 +56,7 @@ describe("Match and InMemoryDatabase Types", () => {
       awayTeam: "Team B",
       homeScore: 0,
       awayScore: 0,
+      finished: false,
     };
 
     db[match.id] = match;
@@ -73,6 +77,7 @@ describe("Match and InMemoryDatabase Types", () => {
       awayTeam: "Team B",
       homeScore: 0,
       awayScore: 0,
+      finished: false,
     };
 
     db[match.id] = match;

@@ -4,6 +4,7 @@ export type Match = {
   awayTeam: string;
   homeScore: number;
   awayScore: number;
+  finished: boolean;
 };
 
 export type InMemoryDatabase = Record<string, Match>;
