@@ -43,6 +43,8 @@
 | ------------- | ------------------------------------------------------------------------------------------------------------------------ | ---- |
 | TSK1          | [ADR - Programming Language Selection for the Project](/ADR/Programming%20Language%20Selection%20for%20the%20Project.md) | DONE |
 | TSK2          | [ADR - Project Branches Structure](/Project%20Branches%20Structure.md)                                                   | DONE |
-| TSK3          | Node TS init                                                                                                             |      |
-| TSK4          | Node TS test tools init                                                                                                  |      |
-| TSK5          | ADR - test strategy                                                                                                      |      |
+| TSK3          | Node TS init                                                                                                             | DONE |
+| TSK4          | Node TS test tools init                                                                                                  | DONE |
+| TSK5          | F1                                                                                                                       | DONE |
+| TSK6          | F2                                                                                                                       | DONE |
+| TSK7          | F3                                                                                                                       |      |
