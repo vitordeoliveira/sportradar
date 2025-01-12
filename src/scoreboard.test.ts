@@ -42,13 +42,13 @@ describe("Scoreboard", () => {
     };
 
     const db: InMemoryDatabase = {
-      id: match,
+      [matchId]: match,
     };
 
     const scoreboard = new Scoreboard(db);
 
-    let currentMatch = scoreboard.updateMatch(matchId, {0,1});
-    expect(currentMatch).toEqual({...match, awayScore: 1});
+    let currentMatch = scoreboard.updateMatch(matchId, { home: 0, away: 1 });
+    expect(currentMatch).toEqual({ ...match, awayScore: 1 });
   });
 
   it("Should finish the match remove match from scoreboard", () => {});

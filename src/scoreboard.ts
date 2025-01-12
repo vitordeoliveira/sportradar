@@ -22,4 +22,14 @@ export class Scoreboard {
     console.log(`Match started: ${homeTeam} vs ${awayTeam}`);
     return match;
   }
+
+  updateMatch(matchId: string, score: { home: number; away: number }): Match {
+    this.db[matchId] = {
+      ...this.db[matchId],
+      homeScore: score.home,
+      awayScore: score.away,
+    };
+
+    return this.db[matchId];
+  }
 }
