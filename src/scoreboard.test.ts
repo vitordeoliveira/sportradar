@@ -29,7 +29,28 @@ describe("Scoreboard", () => {
     };
     expect(game).toEqual(match);
   });
-  it("Should update score receive a pair of absolute scores", () => {});
+
+  it("Should update score receive a pair of absolute scores", () => {
+    const matchId = `Team home-Team away-0`;
+    let match = {
+      id: matchId,
+      homeTeam: "Team home",
+      awayTeam: "Team away",
+      homeScore: 0,
+      awayScore: 0,
+      finished: false,
+    };
+
+    const db: InMemoryDatabase = {
+      id: match,
+    };
+
+    const scoreboard = new Scoreboard(db);
+
+    let currentMatch = scoreboard.updateMatch(matchId, {0,1});
+    expect(currentMatch).toEqual({...match, awayScore: 1});
+  });
+
   it("Should finish the match remove match from scoreboard", () => {});
 
   describe("Scoreboard retrieve matches", () => {
