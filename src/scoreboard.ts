@@ -24,6 +24,10 @@ export class Scoreboard {
   }
 
   updateMatch(matchId: string, score: { home: number; away: number }): Match {
+    if (this.db[matchId] == undefined) {
+      throw new Error("match dont exist");
+    }
+
     this.db[matchId] = {
       ...this.db[matchId],
       homeScore: score.home,
