@@ -11,7 +11,7 @@
 | ID  | Requirement                                                                                                 | Done |
 | --- | ----------------------------------------------------------------------------------------------------------- | ---- |
 | F1  | Start a new match, assuming initial score 0–0, and add it to the scoreboard, capturing home and away teams. | OK   |
-| F2  | Update the score of a match by providing absolute scores for the home and away teams.                       |      |
+| F2  | Update the score of a match by providing absolute scores for the home and away teams.                       | OK   |
 | F3  | Finish a match currently in progress and remove it from the scoreboard.                                     |      |
 | F4  | Get a summary of matches in progress, ordered by their total score, with ties broken by recency.            |      |
 
