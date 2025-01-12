@@ -60,5 +60,5 @@
 | TSK6          | F2                                                                                                                       | DONE |
 | TSK7          | F3                                                                                                                       | DONE |
 | TSK8          | F4                                                                                                                       | DONE |
-| TSK9          | NF(n) check each of the Non-Functional Requirement                                                                       |      |
+| TSK9          | NF(n) check each of the Non-Functional Requirement                                                                       | DONE |
 | TSK10         | make a impl in a the index.ts to check if works as library                                                               |      |
