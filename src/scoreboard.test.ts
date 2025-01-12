@@ -91,7 +91,26 @@ describe("Scoreboard", () => {
     });
   });
 
-  it("Should finish the match remove match from scoreboard", () => {});
+  it("Should finish the match remove match from scoreboard", () => {
+    const matchId = `Team home-Team away-0`;
+    let match = {
+      id: matchId,
+      homeTeam: "Team home",
+      awayTeam: "Team away",
+      homeScore: 0,
+      awayScore: 0,
+      finished: false,
+    };
+
+    const db: InMemoryDatabase = {
+      [matchId]: match,
+    };
+
+    const scoreboard = new Scoreboard(db);
+    scoreboard.finishMatch(matchId);
+
+    expect(db[matchId].finished).toBeTruthy();
+  });
 
   describe("Scoreboard retrieve matches", () => {
     it("Should retrieve ordered by total score", () => {});
