@@ -8,11 +8,12 @@
     - [Non-Functional Requirements](#non-functional-requirements)
   - [TODO-LIST](#todo-list)
   <!--toc:end-->
+
 ## architectural decision records
 
 [ADR - Programming Language Selection for the Project](/ADR/Programming%20Language%20Selection%20for%20the%20Project.md)
 
-[ADR - Project Branches Structure](/Project%20Branches%20Structure.md)
+[ADR - Project Branches Structure](/ADR/Project%20Branches%20Structure.md)
 
 ### Functional Requirements
 
