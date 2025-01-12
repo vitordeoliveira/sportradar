@@ -66,6 +66,29 @@ describe("Scoreboard", () => {
       ).toThrow("match dont exist");
     });
 
+    it("should return a copy of database object and not a reference", () => {
+      const matchId = `Team home-Team away-0`;
+      let match = {
+        id: matchId,
+        homeTeam: "Team home",
+        awayTeam: "Team away",
+        homeScore: 0,
+        awayScore: 0,
+        finished: false,
+      };
+
+      const db: InMemoryDatabase = {
+        [matchId]: match,
+      };
+
+      const scoreboard = new Scoreboard(db);
+
+      let currentMatch = scoreboard.updateMatch(matchId, { home: 0, away: 1 });
+      expect(currentMatch).toEqual({ ...match, awayScore: 1 });
+      currentMatch.awayScore = 2;
+
+      expect(db[matchId]).toEqual({ ...match, awayScore: 1 });
+    });
   });
 
   it("Should finish the match remove match from scoreboard", () => {});
