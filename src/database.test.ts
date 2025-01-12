@@ -43,4 +43,42 @@ describe("Match and InMemoryDatabase Types", () => {
     expect(db["1"]).toEqual(match1);
     expect(db["2"]).toEqual(match2);
   });
+
+  it("should update a match in the InMemoryDatabase", () => {
+    const db: InMemoryDatabase = {};
+
+    const match: Match = {
+      id: "1",
+      homeTeam: "Team A",
+      awayTeam: "Team B",
+      homeScore: 0,
+      awayScore: 0,
+    };
+
+    db[match.id] = match;
+
+    db["1"].homeScore = 2;
+    db["1"].awayScore = 1;
+
+    expect(db["1"].homeScore).toBe(2);
+    expect(db["1"].awayScore).toBe(1);
+  });
+
+  it("should delete a match from the InMemoryDatabase", () => {
+    const db: InMemoryDatabase = {};
+
+    const match: Match = {
+      id: "1",
+      homeTeam: "Team A",
+      awayTeam: "Team B",
+      homeScore: 0,
+      awayScore: 0,
+    };
+
+    db[match.id] = match;
+
+    delete db["1"];
+
+    expect(db["1"]).toBeUndefined();
+  });
 });
