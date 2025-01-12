@@ -9,6 +9,7 @@ describe("Match and InMemoryDatabase Types", () => {
       homeScore: 2,
       awayScore: 1,
       finished: false,
+      createdAt: 0,
     };
 
     expect(match.id).toBe("1");
@@ -28,6 +29,7 @@ describe("Match and InMemoryDatabase Types", () => {
       homeScore: 0,
       awayScore: 0,
       finished: false,
+      createdAt: 0,
     };
 
     const match2: Match = {
@@ -37,6 +39,7 @@ describe("Match and InMemoryDatabase Types", () => {
       homeScore: 3,
       awayScore: 2,
       finished: false,
+      createdAt: 0,
     };
 
     db[match1.id] = match1;
@@ -57,6 +60,7 @@ describe("Match and InMemoryDatabase Types", () => {
       homeScore: 0,
       awayScore: 0,
       finished: false,
+      createdAt: 0,
     };
 
     db[match.id] = match;
@@ -78,6 +82,7 @@ describe("Match and InMemoryDatabase Types", () => {
       homeScore: 0,
       awayScore: 0,
       finished: false,
+      createdAt: 0,
     };
 
     db[match.id] = match;
