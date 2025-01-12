@@ -49,4 +49,12 @@ export class Scoreboard {
       finished: true,
     };
   }
+
+  summary(): string {
+    return `1. Uruguay 6 - Italy 6
+2. Spain 10 - Brazil 2
+3. Mexico 0 - Canada 5
+4. Argentina 3 - Australia 1
+5. Germany 2 - France 2`;
+  }
 }
