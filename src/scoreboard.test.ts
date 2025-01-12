@@ -21,13 +21,14 @@ describe("Scoreboard", () => {
       let game: Match = scoreboard.addMatch("Team home", "Team away");
 
       const id = `Team home-Team away-0`;
-      let match = {
+      let match: Match = {
         id,
         homeTeam: "Team home",
         awayTeam: "Team away",
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
       expect(game).toEqual(match);
       expect(db[match.id]).toEqual(match);
@@ -49,6 +50,7 @@ describe("Scoreboard", () => {
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
 
       const gameId2 = `Team home1-Team away1-0`;
@@ -59,6 +61,7 @@ describe("Scoreboard", () => {
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
       expect(game1).toEqual(match1);
       expect(game2).toEqual(match2);
@@ -183,7 +186,7 @@ describe("Scoreboard", () => {
         homeScore: 10,
         awayScore: 2,
         finished: false,
-        createdAt: 0,
+        createdAt: 1,
       };
 
       const match3: Match = {
@@ -193,7 +196,7 @@ describe("Scoreboard", () => {
         homeScore: 2,
         awayScore: 2,
         finished: false,
-        createdAt: 0,
+        createdAt: 2,
       };
 
       const match4: Match = {
@@ -203,7 +206,7 @@ describe("Scoreboard", () => {
         homeScore: 6,
         awayScore: 6,
         finished: false,
-        createdAt: 0,
+        createdAt: 3,
       };
 
       const match5: Match = {
@@ -213,7 +216,7 @@ describe("Scoreboard", () => {
         homeScore: 3,
         awayScore: 1,
         finished: false,
-        createdAt: 0,
+        createdAt: 4,
       };
 
       db[match1.id] = match1;
@@ -227,7 +230,7 @@ describe("Scoreboard", () => {
       db = {};
     });
 
-    it("Should retrieve ordered by total score", () => {
+    it("Should ordered by the most recently started match when total score is the same", () => {
       const scoreboard = new Scoreboard(db);
 
       expect(scoreboard.summary()).toContain(`1. Uruguay 6 - Italy 6
@@ -236,7 +239,5 @@ describe("Scoreboard", () => {
 4. Argentina 3 - Australia 1
 5. Germany 2 - France 2`);
     });
-
-    it("Should ordered by the most recently started match when total score is the same", () => {});
   });
 });

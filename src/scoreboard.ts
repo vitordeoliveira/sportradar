@@ -52,14 +52,22 @@ export class Scoreboard {
   }
 
   summary(): string {
-    const matchesInProgress = Object.values(this.db).filter(
-      (match) => !match.finished,
-    );
+    return Object.values(this.db)
+      .filter((match) => !match.finished)
+      .sort((a, b) => {
+        const scoreA = a.homeScore + a.awayScore;
+        const scoreB = b.homeScore + b.awayScore;
 
-    return `1. Uruguay 6 - Italy 6
-2. Spain 10 - Brazil 2
-3. Mexico 0 - Canada 5
-4. Argentina 3 - Australia 1
-5. Germany 2 - France 2`;
+        if (scoreA !== scoreB) {
+          return scoreB - scoreA;
+        }
+
+        return b.createdAt - a.createdAt;
+      })
+      .map(
+        (match, index) =>
+          `${index + 1}. ${match.homeTeam} ${match.homeScore} - ${match.awayTeam} ${match.awayScore}`,
+      )
+      .join("\n");
   }
 }
