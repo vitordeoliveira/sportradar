@@ -127,25 +127,37 @@ describe("Scoreboard", () => {
     });
   });
 
-  it("Should finish the match remove match from scoreboard", () => {
-    const matchId = `Team home-Team away-0`;
-    let match = {
-      id: matchId,
-      homeTeam: "Team home",
-      awayTeam: "Team away",
-      homeScore: 0,
-      awayScore: 0,
-      finished: false,
-    };
+  describe("finish match", () => {
+    it("Should finish the match remove match from scoreboard", () => {
+      const matchId = `Team home-Team away-0`;
+      let match = {
+        id: matchId,
+        homeTeam: "Team home",
+        awayTeam: "Team away",
+        homeScore: 0,
+        awayScore: 0,
+        finished: false,
+      };
 
-    const db: InMemoryDatabase = {
-      [matchId]: match,
-    };
+      const db: InMemoryDatabase = {
+        [matchId]: match,
+      };
 
-    const scoreboard = new Scoreboard(db);
-    scoreboard.finishMatch(matchId);
+      const scoreboard = new Scoreboard(db);
+      scoreboard.finishMatch(matchId);
 
-    expect(db[matchId].finished).toBeTruthy();
+      expect(db[matchId].finished).toBeTruthy();
+    });
+
+    it("should return error in match id does not exist", () => {
+      const db: InMemoryDatabase = {};
+
+      const scoreboard = new Scoreboard(db);
+
+      expect(() => scoreboard.finishMatch("non_existent_match")).toThrow(
+        "match dont exist",
+      );
+    });
   });
 
   describe("Scoreboard retrieve matches", () => {
