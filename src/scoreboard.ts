@@ -1,9 +1,25 @@
-import { InMemoryDatabase } from "./database";
+import { InMemoryDatabase, Match } from "./database";
 
 export class Scoreboard {
   private db: InMemoryDatabase;
 
   constructor(db: InMemoryDatabase) {
     this.db = db;
+  }
+
+  addMatch(homeTeam: string, awayTeam: string): Match {
+    const id = `${homeTeam}-${awayTeam}-${Date.now()}`;
+    let match = {
+      id,
+      homeTeam,
+      awayTeam,
+      homeScore: 0,
+      awayScore: 0,
+      finished: false,
+    };
+
+    this.db[id] = match;
+    console.log(`Match started: ${homeTeam} vs ${awayTeam}`);
+    return match;
   }
 }

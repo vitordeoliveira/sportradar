@@ -2,6 +2,11 @@ import { InMemoryDatabase, Match } from "./database";
 import { Scoreboard } from "./scoreboard";
 
 describe("Scoreboard", () => {
+  beforeAll(() => {
+    const mockTimestamp = 0;
+    jest.spyOn(Date, "now").mockImplementation(() => mockTimestamp);
+  });
+
   it("Should create Scoreboard class with injected database", () => {
     const db: InMemoryDatabase = {};
     const scoreboard = new Scoreboard(db);
@@ -13,8 +18,16 @@ describe("Scoreboard", () => {
 
     let game: Match = scoreboard.addMatch("Team home", "Team away");
 
-    expect(game.awayTeam).toBe(0);
-    expect(game.homeTeam).toBe(0);
+    const id = `Team home-Team away-0`;
+    let match = {
+      id,
+      homeTeam: "Team home",
+      awayTeam: "Team away",
+      homeScore: 0,
+      awayScore: 0,
+      finished: false,
+    };
+    expect(game).toEqual(match);
   });
   it("Should update score receive a pair of absolute scores", () => {});
   it("Should finish the match remove match from scoreboard", () => {});
