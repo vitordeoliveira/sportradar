@@ -45,6 +45,10 @@ export class Scoreboard {
       throw new Error("match dont exist");
     }
 
+    console.log(
+      `Finish ${this.db[matchId].homeTeam} X ${this.db[matchId].awayTeam}`,
+    );
+
     this.db[matchId] = {
       ...this.db[matchId],
       finished: true,
