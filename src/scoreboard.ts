@@ -38,4 +38,11 @@ export class Scoreboard {
 
     return JSON.parse(JSON.stringify(this.db[matchId]));
   }
+
+  finishMatch(matchId: string): void {
+    this.db[matchId] = {
+      ...this.db[matchId],
+      finished: true,
+    };
+  }
 }
