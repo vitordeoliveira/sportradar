@@ -20,20 +20,22 @@ export class Scoreboard {
 
     this.db[id] = match;
     console.log(`Match started: ${homeTeam} vs ${awayTeam}`);
-    return match;
+
+    return JSON.parse(JSON.stringify(match));
   }
 
   updateMatch(matchId: string, score: { home: number; away: number }): Match {
-    if (this.db[matchId] == undefined) {
+    let match = this.db[matchId];
+    if (match == undefined) {
       throw new Error("match dont exist");
     }
 
     this.db[matchId] = {
-      ...this.db[matchId],
+      ...match,
       homeScore: score.home,
       awayScore: score.away,
     };
 
-    return this.db[matchId];
+    return JSON.parse(JSON.stringify(this.db[matchId]));
   }
 }
