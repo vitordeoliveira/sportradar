@@ -7,6 +7,8 @@
     - [Functional Requirements](#functional-requirements)
     - [Non-Functional Requirements](#non-functional-requirements)
   - [TODO-LIST](#todo-list)
+  - [Dependencies](#dependencies)
+  - [Test the lib with](#test-the-lib-with)
   <!--toc:end-->
 
 ## architectural decision records
