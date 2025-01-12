@@ -161,6 +161,64 @@ describe("Scoreboard", () => {
   });
 
   describe("Scoreboard retrieve matches", () => {
+    let db: InMemoryDatabase = {};
+    beforeEach(() => {
+      const match1: Match = {
+        id: "1",
+        homeTeam: "Mexico",
+        awayTeam: "Canada",
+        homeScore: 0,
+        awayScore: 5,
+        finished: false,
+      };
+
+      const match2: Match = {
+        id: "2",
+        homeTeam: "Spain",
+        awayTeam: "Brazil",
+        homeScore: 10,
+        awayScore: 2,
+        finished: false,
+      };
+
+      const match3: Match = {
+        id: "3",
+        homeTeam: "Germany",
+        awayTeam: "France",
+        homeScore: 2,
+        awayScore: 2,
+        finished: false,
+      };
+
+      const match4: Match = {
+        id: "4",
+        homeTeam: "Uruguay",
+        awayTeam: "Italy",
+        homeScore: 6,
+        awayScore: 6,
+        finished: false,
+      };
+
+      const match5: Match = {
+        id: "5",
+        homeTeam: "Argentina",
+        awayTeam: "Australia",
+        homeScore: 3,
+        awayScore: 1,
+        finished: false,
+      };
+
+      db[match1.id] = match1;
+      db[match2.id] = match2;
+      db[match3.id] = match3;
+      db[match4.id] = match4;
+      db[match5.id] = match5;
+    });
+
+    afterEach(() => {
+      db = {};
+    });
+
     it("Should retrieve ordered by total score", () => {});
     it("Should ordered by the most recently started match when total score is the same", () => {});
   });
