@@ -22,9 +22,10 @@
 | F1     | Start a new match, assuming initial score 0–0, and add it to the scoreboard, capturing home and away teams. | OK   |
 | F2     | Update the score of a match by providing absolute scores for the home and away teams.                       | OK   |
 | F3\*\* | Finish a match currently in progress and remove it from the scoreboard.                                     | OK   |
-| F4     | Get a summary of matches in progress, ordered by their total score, with ties broken by recency.            |      |
+| F4\*\* | Get a summary of matches in progress, ordered by their total score, with ties broken by recency.            | OK   |
 
 > F3: it is dubious to me the word "remove it", as is not saying "delete it", o choose to just flag it to finished
+> F4: I choose to return a summary string, it is not very useful as library but I understood that was required to return this way
 
 ### Non-Functional Requirements
 
@@ -42,10 +43,12 @@
 | Desired Order | Task                                                                                                                     | Done |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------ | ---- |
 | TSK1          | [ADR - Programming Language Selection for the Project](/ADR/Programming%20Language%20Selection%20for%20the%20Project.md) | DONE |
-| TSK2          | [ADR - Project Branches Structure](/Project%20Branches%20Structure.md)                                                   | DONE |
+| TSK2          | [ADR - Project Branches Structure](ADR/Project%20Branches%20Structure.md)                                                | DONE |
 | TSK3          | Node TS init                                                                                                             | DONE |
 | TSK4          | Node TS test tools init                                                                                                  | DONE |
 | TSK5          | F1                                                                                                                       | DONE |
 | TSK6          | F2                                                                                                                       | DONE |
 | TSK7          | F3                                                                                                                       | DONE |
-| TSK8          | F4                                                                                                                       |      |
+| TSK8          | F4                                                                                                                       | DONE |
+| TSK9          | NF(n) check each of the Non-Functional Requirement                                                                       |      |
+| TSK10         | make a impl in a the index.ts to check if works as library                                                               |      |
