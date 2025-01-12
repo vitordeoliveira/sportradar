@@ -1,5 +1,13 @@
 # sportradar task
 
+<!--toc:start-->
+
+- [sportradar task](#sportradar-task)
+  - [architectural decision records](#architectural-decision-records)
+    - [Functional Requirements](#functional-requirements)
+    - [Non-Functional Requirements](#non-functional-requirements)
+  - [TODO-LIST](#todo-list)
+  <!--toc:end-->
 ## architectural decision records
 
 [ADR - Programming Language Selection for the Project](/ADR/Programming%20Language%20Selection%20for%20the%20Project.md)
