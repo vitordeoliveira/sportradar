@@ -40,6 +40,10 @@ export class Scoreboard {
   }
 
   finishMatch(matchId: string): void {
+    if (this.db[matchId] == undefined) {
+      throw new Error("match dont exist");
+    }
+
     this.db[matchId] = {
       ...this.db[matchId],
       finished: true,
