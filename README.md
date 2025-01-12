@@ -21,7 +21,7 @@
 | ------ | ----------------------------------------------------------------------------------------------------------- | ---- |
 | F1     | Start a new match, assuming initial score 0–0, and add it to the scoreboard, capturing home and away teams. | OK   |
 | F2     | Update the score of a match by providing absolute scores for the home and away teams.                       | OK   |
-| F3\*\* | Finish a match currently in progress and remove it from the scoreboard.                                     |      |
+| F3\*\* | Finish a match currently in progress and remove it from the scoreboard.                                     | OK   |
 | F4     | Get a summary of matches in progress, ordered by their total score, with ties broken by recency.            |      |
 
 > F3: it is dubious to me the word "remove it", as is not saying "delete it", o choose to just flag it to finished
@@ -47,4 +47,5 @@
 | TSK4          | Node TS test tools init                                                                                                  | DONE |
 | TSK5          | F1                                                                                                                       | DONE |
 | TSK6          | F2                                                                                                                       | DONE |
-| TSK7          | F3                                                                                                                       |      |
+| TSK7          | F3                                                                                                                       | DONE |
+| TSK8          | F4                                                                                                                       |      |
