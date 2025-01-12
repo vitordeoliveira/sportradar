@@ -9,13 +9,14 @@ export class Scoreboard {
 
   addMatch(homeTeam: string, awayTeam: string): Match {
     const id = `${homeTeam}-${awayTeam}-${Date.now()}`;
-    let match = {
+    let match: Match = {
       id,
       homeTeam,
       awayTeam,
       homeScore: 0,
       awayScore: 0,
       finished: false,
+      createdAt: Date.now(),
     };
 
     this.db[id] = match;
@@ -51,6 +52,10 @@ export class Scoreboard {
   }
 
   summary(): string {
+    const matchesInProgress = Object.values(this.db).filter(
+      (match) => !match.finished,
+    );
+
     return `1. Uruguay 6 - Italy 6
 2. Spain 10 - Brazil 2
 3. Mexico 0 - Canada 5

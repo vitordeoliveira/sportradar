@@ -69,13 +69,14 @@ describe("Scoreboard", () => {
   describe("update match", () => {
     it("Should update score receive a pair of absolute scores", () => {
       const matchId = `Team home-Team away-0`;
-      let match = {
+      let match: Match = {
         id: matchId,
         homeTeam: "Team home",
         awayTeam: "Team away",
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
 
       const db: InMemoryDatabase = {
@@ -104,13 +105,14 @@ describe("Scoreboard", () => {
 
     it("should return a copy of database object and not a reference", () => {
       const matchId = `Team home-Team away-0`;
-      let match = {
+      let match: Match = {
         id: matchId,
         homeTeam: "Team home",
         awayTeam: "Team away",
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
 
       const db: InMemoryDatabase = {
@@ -130,13 +132,14 @@ describe("Scoreboard", () => {
   describe("finish match", () => {
     it("Should finish the match remove match from scoreboard", () => {
       const matchId = `Team home-Team away-0`;
-      let match = {
+      let match: Match = {
         id: matchId,
         homeTeam: "Team home",
         awayTeam: "Team away",
         homeScore: 0,
         awayScore: 0,
         finished: false,
+        createdAt: 0,
       };
 
       const db: InMemoryDatabase = {
@@ -170,6 +173,7 @@ describe("Scoreboard", () => {
         homeScore: 0,
         awayScore: 5,
         finished: false,
+        createdAt: 0,
       };
 
       const match2: Match = {
@@ -179,6 +183,7 @@ describe("Scoreboard", () => {
         homeScore: 10,
         awayScore: 2,
         finished: false,
+        createdAt: 0,
       };
 
       const match3: Match = {
@@ -188,6 +193,7 @@ describe("Scoreboard", () => {
         homeScore: 2,
         awayScore: 2,
         finished: false,
+        createdAt: 0,
       };
 
       const match4: Match = {
@@ -197,6 +203,7 @@ describe("Scoreboard", () => {
         homeScore: 6,
         awayScore: 6,
         finished: false,
+        createdAt: 0,
       };
 
       const match5: Match = {
@@ -206,6 +213,7 @@ describe("Scoreboard", () => {
         homeScore: 3,
         awayScore: 1,
         finished: false,
+        createdAt: 0,
       };
 
       db[match1.id] = match1;
