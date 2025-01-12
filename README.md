@@ -61,4 +61,18 @@
 | TSK7          | F3                                                                                                                       | DONE |
 | TSK8          | F4                                                                                                                       | DONE |
 | TSK9          | NF(n) check each of the Non-Functional Requirement                                                                       | DONE |
-| TSK10         | make a impl in a the index.ts to check if works as library                                                               |      |
+| TSK10         | make a impl in a the index.ts to check if works as library                                                               | DONE |
+
+## Dependencies
+
+nodejs + npm
+
+## Test the lib with
+
+```bash
+npm install
+npm run test
+
+# run index.ts that is a simple implementation of the lib
+npm run start
+```
