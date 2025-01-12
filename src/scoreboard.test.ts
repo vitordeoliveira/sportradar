@@ -219,7 +219,16 @@ describe("Scoreboard", () => {
       db = {};
     });
 
-    it("Should retrieve ordered by total score", () => {});
+    it("Should retrieve ordered by total score", () => {
+      const scoreboard = new Scoreboard(db);
+
+      expect(scoreboard.summary()).toContain(`1. Uruguay 6 - Italy 6
+2. Spain 10 - Brazil 2
+3. Mexico 0 - Canada 5
+4. Argentina 3 - Australia 1
+5. Germany 2 - France 2`);
+    });
+
     it("Should ordered by the most recently started match when total score is the same", () => {});
   });
 });
